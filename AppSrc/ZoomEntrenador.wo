@@ -70,7 +70,9 @@ Object oZoomEntrenador is a cWebView
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
             Set psLabel to "EquipoID"
-        End_Object 
+            
+       End_Object 
+        
     End_Object 
 
     Object oActionGroup is a cWebMenuGroup
@@ -84,6 +86,17 @@ Object oZoomEntrenador is a cWebView
             End_Procedure
 
         End_Object 
+        
+        Object oEquipoBtn is a cWebMenuItem
+            Set psCaption to "Equipo"
+
+            WebRegisterPath ntNavigateForward oSelectEquipo
+
+            Procedure OnClick
+                Send NavigatePath
+            End_Procedure
+
+        End_Object
 
         Object oEditBtn is a cWebMenuItem
             Set psCSSClass to "WebEditMenuItem"
