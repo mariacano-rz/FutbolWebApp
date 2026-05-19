@@ -153,6 +153,9 @@ Object oZoomEntrenador is a cWebView
     End_Procedure
 
     Procedure OnNavigateForward tWebNavigateData NavigateData Integer hoInvokingView Integer hoInvokingObject
+        
+           Showln "oZoomEntrenador - OnNavigateForward" 
+        
         Case Begin
             Case (NavigateData.eNavigateType = nfFromMain)
                 // If from main, this is a propbably a main file Select to Zoom.
