@@ -64,6 +64,17 @@ Object oZoomLiga is a cWebView
     End_Object 
 
     Object oActionGroup is a cWebMenuGroup
+        
+       Object oEquiposBtn is a cWebMenuItem
+            Set psCaption to "Equipos"
+
+            WebRegisterPath ntNavigateForward oSelectEquipo
+
+            Procedure OnClick
+                Send NavigatePath
+            End_Procedure
+
+        End_Object 
 
         Object oSaveBtn is a cWebMenuItem
             Set psCSSClass to "WebSaveMenuItem"
